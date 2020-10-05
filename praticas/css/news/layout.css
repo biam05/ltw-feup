@@ -27,10 +27,6 @@ aside{
     grid-column: start;
 }
 
-body > footer{
-    align-self: end;
-}
-
 /* ------------- HEADER ------------- */
 
 body > header{
