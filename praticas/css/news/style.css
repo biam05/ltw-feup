@@ -1,157 +1,178 @@
+/* html{
+    padding-left: 10em;
+    padding-right: 10em;
+} */
+
+body {
+    font-family: 'Verdana', sans-serif;
+}
+
+p {
+    font-family: "Georgia", serif;
+    line-height: 1.4em;
+}
+
+/* ------------- HEADER ------------- */
+
 body > header {
-    margin-top: 1em;
     background-color: #046DD5;
+
     padding: 1em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     font-size: 0.8em;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-}
-
-body > header > * {
+body > header  *{
     margin: 0;
+    margin-top: 0.3em;
 }
 
-body > header > h2 {
+body > header h2{
     font-size: 1em;
 }
 
-#signup a {
+body > header a{
+    text-decoration: none;
+    color: white;
+}
+
+body > header #signup a {
     padding: 0 1em;
 }
 
-#signup a:first-of-type {
-    border-right: 1px solid white; 
+body > header #signup a:first-child {
+    border-right: 1px solid white;
     padding-left: 0;
 }
 
-nav#menu a{
-    color: black;
-    text-decoration: none;
-}
+/* ------------- NAV ------------- */
 
-nav#menu > ul{
-    list-style: none;
-    padding-left: 0;
-    text-align: center;
+#menu ul {
     margin: 0;
+    padding: 0;
 }
 
-nav#menu > ul > li{
-    border-top: 4px solid;
-    display: block;
-    padding: 1em;
+#menu li {
     background-color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+    list-style-type: none;
+
+    padding: 1em 0;
 }
 
-nav#menu > ul > li:nth-of-type(1){
-    border-color:#E1493E;
+#menu a{
+    text-decoration: none;
+    color: black;
 }
 
-nav#menu > ul > li:nth-of-type(2){
-    border-color:#8ABA56;
+#menu li:nth-child(1) {
+    border-top: 5px solid #e1493e;
 }
 
-nav#menu > ul > li:nth-of-type(3){
-    border-color:#5B4282;
+#menu li:nth-child(2) {
+    border-top: 5px solid #8aba56;
 }
 
-nav#menu > ul > li:nth-of-type(4){
-    border-color:#FF8932;
+#menu li:nth-child(3) {
+    border-top: 5px solid #5b4282;
 }
 
-nav#menu > ul > li:nth-of-type(5){
-    border-color:#19B6E9;
+#menu li:nth-child(4) {
+    border-top: 5px solid #ff8932;
 }
 
-nav#menu > ul > li:nth-of-type(6){
-    border-color:#E84C8B;
+#menu li:nth-child(5) {
+    border-top: 5px solid #19b6e9;
 }
 
-aside#related{
-    background-color:#2A2F33;
+#menu li:nth-child(6) {
+    border-top: 5px solid #e84c8b;
+}
+
+#hamburger, .hamburger {
+    display: none;
+}
+
+/* ------------- RELATED ------------- */
+
+#related {
+    background-color:  #2a2f33;
+    color: white;
+
     padding: 1em;
-    color: white;
 }
 
-aside#related article a{
+#related h1 a {
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
 }
-
-aside#related article p{
+  
+#related p {
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-section#news {
-    margin-top: 1em;
-    margin-right: 1em;
-}
+/* ------------- ARTICLE ------------- */
 
-section#news article {
-    position: relative;
-    margin-bottom: 1em;
-    background-color: white;
-}
-
-section#news article header {
+#news header {
+    max-width: 10em;
+    padding: 1em;
     position: absolute;
-    top: 1em;
-    left: 2em;
-    width: 300px;
 }
 
-section#news article header h1 {
-    text-shadow: 5px 5px 3px black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#news header h1{
+    margin: 0;
+    text-shadow: 0.2em 0.2em 0.2em black;
 }
 
-section#news article img {
-    width: 100%;
+#news header a{
+    text-decoration: none;
+    color: white;
 }
 
-section#news article p {
-    margin-left: 1em;
-    font-family: var(--font-2);
+#news img {
+    width: 100%
 }
 
-section#news article > p:first-of-type:first-letter {
+#news > article {
+    background-color: white;
+    margin: 1em 1em 1em 0;
+}
+
+#news > article > p{
+    padding: 0 1em;
+}
+
+#news > article > p:first-of-type:first-letter{
     font-size: 2em;
 }
 
-section#news article footer {
+#news footer{
     background-color: #F4655F;
-    color: white;
     padding: 1em;
-    font-size: 0.9em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-section#news article footer a{
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
 }
 
-section#news article footer .author::before{
-    content: 'By ';
+#news footer a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
 }
 
-section#news article footer .comments::after{
-    content: ' comments';
-}
-
-section#news article footer .tags, section#news article footer .date{
+#news footer .tags {
     margin-right: 1em;
 }
 
-body > footer {
-    background-color: #2A2F33;
-    color: white;
-    padding: 0.2em 1em;
-    font-size: 0.9em;
+#news footer .comments {
+    margin-left: 1em;
+}
+
+#news footer .author:before{
+    content: "By ";
+}
+#news footer .comments:after {
+    content: ' comments';
 }
