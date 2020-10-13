@@ -1,0 +1,71 @@
+html{
+    background-color: white;
+}
+
+body{
+    font-family: times, serif;
+    margin: 0;
+    padding-left: 40px;
+    background-image: url(stripe.png);
+    background-repeat: repeat-y;
+}
+
+h1, h2, h3{
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#header{
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+}
+
+#header h1, #header h2 {
+    margin: 0;
+}
+
+#header h2{
+    font-size: 100%;
+}
+
+#menu{
+    background-color: #333333;
+}
+
+#menu a{
+    color: black;
+    text-decoration: none;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    padding: 12px 0px;
+    margin: 0px;
+}
+
+#menu li {
+    display: inline;
+    margin: 10px;
+    display: inline;
+    padding: 0 10px;
+    margin-right: 0;
+    background-color: #ffffff;
+}
+
+#content{
+    padding: 10px;
+    width: 800px;
+}
+
+#content img{
+    float: right;
+}
+
+#content li{
+    display: inline;
+}
+
+#content li a{
+    
+}
