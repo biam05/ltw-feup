@@ -25,10 +25,32 @@ for(let i = 0; i < input.length; i++) {
 let description = document.querySelector("form input[name='description']");
 
 // Submit event listener
-form[0].addEventListener('submit', function(e) {
+form[0].addEventListener('submit', function(e){
     e.preventDefault();
     let newLine = document.createElement("tr");
-    newLine.innerHTML  = `<td>${description.value}</td><td><input value="${quantity.value}"></td><td><input type="button" value="Remove"></td>`;
+    newLine.innerHTML  = `<td>${description.value}</td><td><input value="${quantity.value}">
+        </td><td><input type="button" value="Remove"></td>`;
+
     document.getElementById("products").append(newLine);
+    updateTotal();
+
+    // Remove Line
+    newLine.querySelector('input[type=button]').addEventListener('click', function(){
+        newLine.remove();
+        updateTotal();
+    })
+
+    quantity.addEventListener('keyup', updateTotal);
+    
+
     alert('Submitted!')
 })
+
+function updateTotal () {
+    let quantities = document.querySelectorAll("td:nth-child(2) input")
+    let t = 0
+    for (let i = 0; i < quantities.length; i++) {
+        t += parseInt(quantities[i].value)
+    }
+    total.innerHTML = t
+}
