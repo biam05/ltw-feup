@@ -1,5 +1,8 @@
-// Mostra um alerta no ecra
-//window-alert("Hello World");
+// Select table with id 'products'
+// Without 'defer'
+window.addEventListener('load', function() {
+    let products = document.getElementById('products')
+    console.log(products)
+})
 
-// Escreve na Consola (F12 + CONSOLA
-console.log("Hello World");
+// With 'defer'
