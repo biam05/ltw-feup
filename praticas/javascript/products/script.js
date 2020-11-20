@@ -20,3 +20,9 @@ for(let i = 0; i < input.length; i++) {
     // --- using outerHTML
     console.log(input[i].outerHTML);
 }
+
+// Submit event listener
+form[0].addEventListener('submit', function() {
+  alert('Submitted!')
+  event.preventDefault();
+})
