@@ -21,8 +21,14 @@ for(let i = 0; i < input.length; i++) {
     console.log(input[i].outerHTML);
 }
 
+// Select the desription input
+let description = document.querySelector("form input[name='description']");
+
 // Submit event listener
-form[0].addEventListener('submit', function() {
-  alert('Submitted!')
-  event.preventDefault();
+form[0].addEventListener('submit', function(e) {
+    e.preventDefault();
+    let newLine = document.createElement("tr");
+    newLine.innerHTML  = `<td>${description.value}</td><td><input value="${quantity.value}"></td><td><input type="button" value="Remove"></td>`;
+    document.getElementById("products").append(newLine);
+    alert('Submitted!')
 })
