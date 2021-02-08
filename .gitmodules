@@ -1,0 +1,3 @@
+[submodule "feup-ltw-project"]
+	path = feup-ltw-project
+	url = https://github.com/biam05/feup-ltw-project
